@@ -10,7 +10,6 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 
 let players = [];
 let matches = [];
@@ -135,4 +134,5 @@ app.get("/", (req, res) => {
   `);
 });
 
-app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
